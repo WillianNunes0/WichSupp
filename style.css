@@ -5,8 +5,9 @@
 body {
     margin: 0px;
     padding-top: 70px;
-    background-color: #7e8d00;
-    background: linear-gradient(to top, #faff00, #d1d900);
+    background-color: #121212;
+    background: linear-gradient(180deg, #121212 0%, #1a1a1a 100%);
+    color: #F5F5F5;
     overflow-x: hidden;
 }
 
@@ -15,17 +16,10 @@ body {
    Texto
 */
 
-h1 {
-    color: white;
-    font-family: cursive;
-    font-size: 70px;
-    margin-bottom: 15px;
-}
-
-h2 {
-    color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 15px;
+h1, h2 {
+    color: #F5F5F5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 p {
@@ -74,15 +68,16 @@ img:hover {
 /* 
    CARD PRINCIPAL
 */
-.card{
-    background-color: rgb(158, 15, 15);
-
+.card {
+    background-color: #1E1E1E !important;
+    border: 1px solid #333;
+    color: #F5F5F5;
 }
-    .card h1{
-            color: red;
-        }
+    .card h1 {
+        color: #FF8C00; /* O título agora brilha com a cor de energia */
+    }
     
-    .card
+  
 
 
 /* 
@@ -98,19 +93,20 @@ button {
    NAV
 */
 
-nav{
-    
-    background: linear-gradient(to top, #ad2121, #640d0d);
+nav.navbar {
+    background-color: rgba(18, 18, 18, 0.95) !important;
+    border-bottom: 2px solid #FF8C00; /* Linha fina de energia */
+    backdrop-filter: blur(10px);
 }
 
 /* links */
-nav .link {
-    color: white;
+.navbar-brand, .nav-link {
+    color: #F5F5F5 !important;
 }
 
 /* hover bonito */
-nav .nav-link:hover {
-    color: #ff4d4d;
+.nav-link:hover {
+    color: #FF8C00 !important;
 }
 
 /* 
@@ -127,121 +123,112 @@ nav .nav-link:hover {
 }
 
 
-/* 
-   SEÇÃO SUPLEMENTOS
-*/
-
-#suplementos {
-    text-align: center;
+.suplementos-container {
+    display: grid;
+    /* Cria colunas flexíveis que se adaptam ao tamanho da tela */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* --- CARD DO PRODUTO --- */
+.container-hover-img {
+    position: relative;
+    width: 100%;       /* Ocupa a largura da coluna da grid */
+    height: 350px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    border: 1px solid #333;
+    overflow: hidden;  /* Mantém tudo dentro do card */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+.container-hover-img:hover {
+    border-color: #FF8C00;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
-    /* 
-    Catálogo
-    */
-
-    .container-hover-img {
-
-        position: relative;
-        width: 400px;
-        height: 400px;
-         margin: 30px auto;
-        overflow: visible;
-        border-radius: 10px;
-    }
-    
-    .texto-produto {
+/* --- IMAGEM DO PRODUTO (Pote) --- */
+.img-topo {
     position: absolute;
-    right: 0%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
-    color: rgb(0, 0, 0);
-    transition: 0.5s;
-    }
-        .texto-produto h2{
-            color: rgb(255, 255, 255);
-        }
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
 
-        .container-hover-img:hover .texto-produto{
-            transform: translate(-250%, -50%);
-        }
+/* Efeito ao passar o mouse: o pote sobe um pouco e diminui para dar espaço ao texto */
+.container-hover-img:hover .img-topo {
+    transform: translate(-50%, -70%) scale(0.8);
+}
 
-    .container-hover-img img {
-        position: absolute;
-        top: 0;
-        left: 0;
+/* --- TEXTO DO PRODUTO --- */
+.texto-produto {
+    position: absolute;
+    bottom: -50px; /* Escondido embaixo */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    z-index: 3;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
 
-        width: 100%;
-        height: 100%;
+.container-hover-img:hover .texto-produto {
+    bottom: 0; /* Sobe no hover */
+}
 
-        object-fit: contain;
-        transition: transform 0.5s ease-in-out;
-    }
+.texto-produto h2 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0;
+    text-transform: uppercase;
+}
 
+/* --- BOTÃO ZOOM (O gatilho do Modal) --- */
+.btn-zoom {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: rgba(255, 140, 0, 0.2);
+    border: 1px solid #FF8C00;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
 
+.container-hover-img:hover .btn-zoom {
+    opacity: 1;
+}
 
-    .suplementos-container {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin: 30px 0;
-        flex-direction: column;
-        
-    }
-    
-    .img-fundo {
-        z-index: 1;
-        width: 100%;
-        height: auto;
-        }
+.btn-zoom:hover {
+    background: #FF8C00;
+}
 
-    .img-topo {
-        z-index: 2;
-    }
+.btn-zoom img {
+    width: 20px;
+    height: 20px;
+}
 
-    .container-hover-img:hover .img-topo {
-        transform: translateX(100%);
-    }
-    .container-hover-img:hover .btn-zoom{
-    opacity: 1;           
-    }
-
-    .tabela-area {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: fit-content; 
-        height: fit-content;
-    }
-        .tabela-area .img-fundo {
-            position: relative ; 
-            max-width: 400px;
-            max-height: 400px;
-            width: auto;
-            height: auto;
-            display: block; 
-        }
-        .btn-zoom{
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            z-index: 10;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            opacity: 0;           
-            transition: opacity 0.3s ease;
-                   
-        
-        }
-            .btn-zoom img {
-                width: 25px ;
-                height: 25px ;
-                position: static ; 
-            }
+/* --- TABELA (Agora oculta para o Modal) --- */
+.tabela-area {
+    display: none; /* Não ocupa mais espaço no layout */
+}
 
 /* 
    SEÇÃO COMPARAR
@@ -258,93 +245,137 @@ nav .nav-link:hover {
     width: 100%;
 }
 
-.container-comparacao {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+Para deixar o layout realmente "Premium" e resolver o problema do h2 estar bagunçando o alinhamento do flex, fiz um ajuste estrutural: o título h2 agora fica fora do container dos seletores para não ser empurrado para o lado.
 
-    gap: 40px;
-    margin: 30px 0;
-    flex-wrap: wrap;
+Aqui está o código refinado e organizado:
 
-    align-items: center;
-}
+CSS
+/* --- SEÇÃO COMPARAR --- */
 
+/* Título centralizado e imponente */
 .container-comparacao h2 {
     text-align: center;
-    font-size: 90px;
+    font-size: 60px;
     margin-bottom: 40px;
+    width: 100%;
+    color: #F5F5F5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-
-table {
-  width: 100%;         
-  border-collapse: collapse; 
-  margin: 20px ;         
-  font-family: Arial, sans-serif;
+/* 2. O Container de Layout (Use este nome no HTML e CSS) */
+.container-comparacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que o botão pule para baixo */
+    max-width: 700px;
+    margin: 0 auto 40px auto;
 }
 
-table th, table td {
-  border: 1px solid #2c2525;  
-  padding: 12px;        
-  text-align: left;      
-}
-
-table th {
-  font-weight: bold;
-}
-
-table tr:hover {
-  background-color: #00000042;
-}
-
-/* 
-   SELECTS
-*/
-
+/* 3. Estilo individual dos Selects */
 .box-select {
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    text-align: left;
 }
 
 .box-select label {
-    margin-bottom: 10px;
-    font-size: 40px;
-    color: rgb(255, 60, 0);
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FF8C00;
+    letter-spacing: 1px;
 }
 
 .box-select select {
-    padding: 10px;
-    width: 220px;
-
+    padding: 12px;
+    width: 240px;
+    background-color: #252525;
+    color: white;
+    border: 1px solid #444;
     border-radius: 8px;
-    border: none;
-
     font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-
-/* 
-   BOTÃO COMPARAR
-*/
-
+/* 4. O Botão (Configurado para ficar embaixo) */
 .btn-comparar {
-    padding: 12px 30px;
-    font-size: 18px;
-
+    padding: 12px 35px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: #FF8C00;
+    color: #121212;
     border-radius: 8px;
     border: none;
-
     cursor: pointer;
-    transition: 0.3s;
+    
+    /* Faz o botão quebrar a linha e centralizar */
+    width: 100%; 
+    max-width: 250px;
+    margin-top: 15px; 
+    
+    height: 48px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
 }
 
 .btn-comparar:hover {
-    background-color: red;
-    color: white;
+    background-color: #e67e00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 0, 0.5);
 }
 
+/* --- TABELA DE RESULTADOS --- */
+
+.resultado {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    background-color: #1E1E1E;
+    border-collapse: separate; 
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+table th {
+    background-color: #FF8C00;
+    color: #121212;
+    font-weight: bold;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+table td {
+    padding: 15px;
+    color: #F5F5F5;
+    border-bottom: 1px solid #2c2525;
+}
+
+/* Efeito de hover na linha da tabela */
+table tr:hover td {
+    background-color: rgba(255, 140, 0, 0.05);
+}
+
+/* Destaque para a linha do Vencedor */
+table tr:last-child td {
+    border-bottom: none;
+    background-color: rgba(255, 140, 0, 0.1);
+    font-weight: bold;
+    color: #FF8C00;
+}
 /* 
    Video
 */
