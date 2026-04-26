@@ -74,7 +74,7 @@ img:hover {
     color: #F5F5F5;
 }
     .card h1 {
-        color: #FF8C00; /* O título agora brilha com a cor de energia */
+        color: #FF8C00; 
     }
     
   
@@ -95,7 +95,7 @@ button {
 
 nav.navbar {
     background-color: rgba(18, 18, 18, 0.95) !important;
-    border-bottom: 2px solid #FF8C00; /* Linha fina de energia */
+    border-bottom: 2px solid #FF8C00;
     backdrop-filter: blur(10px);
 }
 
@@ -125,7 +125,6 @@ nav.navbar {
 
 .suplementos-container {
     display: grid;
-    /* Cria colunas flexíveis que se adaptam ao tamanho da tela */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px 30px;
     padding: 40px 20px;
@@ -136,12 +135,12 @@ nav.navbar {
 /* --- CARD DO PRODUTO --- */
 .container-hover-img {
     position: relative;
-    width: 100%;       /* Ocupa a largura da coluna da grid */
+    width: 100%;     
     height: 350px;
     background-color: #1a1a1a;
     border-radius: 15px;
     border: 1px solid #333;
-    overflow: hidden;  /* Mantém tudo dentro do card */
+    overflow: hidden;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -151,7 +150,7 @@ nav.navbar {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* --- IMAGEM DO PRODUTO (Pote) --- */
+/* --- IMAGEM DO PRODUTO--- */
 .img-topo {
     position: absolute;
     top: 50%;
@@ -164,7 +163,7 @@ nav.navbar {
     transition: all 0.5s ease;
 }
 
-/* Efeito ao passar o mouse: o pote sobe um pouco e diminui para dar espaço ao texto */
+
 .container-hover-img:hover .img-topo {
     transform: translate(-50%, -70%) scale(0.8);
 }
@@ -172,7 +171,7 @@ nav.navbar {
 /* --- TEXTO DO PRODUTO --- */
 .texto-produto {
     position: absolute;
-    bottom: -50px; /* Escondido embaixo */
+    bottom: -50px;
     left: 0;
     width: 100%;
     padding: 20px;
@@ -193,7 +192,7 @@ nav.navbar {
     text-transform: uppercase;
 }
 
-/* --- BOTÃO ZOOM (O gatilho do Modal) --- */
+/* --- BOTÃO ZOOM--- */
 .btn-zoom {
     position: absolute;
     top: 15px;
@@ -225,9 +224,9 @@ nav.navbar {
     height: 20px;
 }
 
-/* --- TABELA (Agora oculta para o Modal) --- */
+
 .tabela-area {
-    display: none; /* Não ocupa mais espaço no layout */
+    display: none; 
 }
 
 /* 
@@ -247,7 +246,6 @@ nav.navbar {
 
 /* --- SEÇÃO COMPARAR --- */
 
-/* Título centralizado e imponente */
 .container-comparacao h2 {
     text-align: center;
     font-size: 60px;
@@ -258,19 +256,19 @@ nav.navbar {
     letter-spacing: 2px;
 }
 
-/* 2. O Container de Layout (Use este nome no HTML e CSS) */
+
 .container-comparacao {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
     gap: 20px;
-    flex-wrap: wrap; /* Permite que o botão pule para baixo */
+    flex-wrap: wrap; 
     max-width: 700px;
     margin: 0 auto 40px auto;
 }
 
-/* 3. Estilo individual dos Selects */
+
 .box-select {
     display: flex;
     flex-direction: column;
@@ -298,7 +296,7 @@ nav.navbar {
     transition: all 0.3s ease;
 }
 
-/* 4. O Botão (Configurado para ficar embaixo) */
+
 .btn-comparar {
     padding: 12px 35px;
     font-size: 16px;
@@ -309,8 +307,6 @@ nav.navbar {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    
-    /* Faz o botão quebrar a linha e centralizar */
     width: 100%; 
     max-width: 250px;
     margin-top: 15px; 
@@ -359,12 +355,11 @@ table td {
     border-bottom: 1px solid #2c2525;
 }
 
-/* Efeito de hover na linha da tabela */
+
 table tr:hover td {
     background-color: rgba(255, 140, 0, 0.05);
 }
 
-/* Destaque para a linha do Vencedor */
 table tr:last-child td {
     border-bottom: none;
     background-color: rgba(255, 140, 0, 0.1);
@@ -383,7 +378,7 @@ table tr:last-child td {
     width: 100%;  
 }
 
-/* Configuração da caixa do formulário */
+/* formulário */
     .contato h2{
         color: black;
         display: flex;
