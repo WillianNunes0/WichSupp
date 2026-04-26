@@ -245,11 +245,6 @@ nav.navbar {
     width: 100%;
 }
 
-Para deixar o layout realmente "Premium" e resolver o problema do h2 estar bagunçando o alinhamento do flex, fiz um ajuste estrutural: o título h2 agora fica fora do container dos seletores para não ser empurrado para o lado.
-
-Aqui está o código refinado e organizado:
-
-CSS
 /* --- SEÇÃO COMPARAR --- */
 
 /* Título centralizado e imponente */
