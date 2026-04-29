@@ -384,6 +384,10 @@ table tr:last-child td {
         display: flex;
         justify-content: center;
     }
+    label {
+        color: #000000;
+        font-weight: bold; 
+        }
     .contato {
         max-width: 400px;
         margin: 40px auto;

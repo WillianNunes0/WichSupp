@@ -184,7 +184,7 @@
     
     <!-- Max Titanium -->
     
-    <a href="https://www.maxtitanium.com.br/" target="_blank">Max Titanium</a>
+    <a href="http://www.maxtitanium.com.br/" target="_blank">Max Titanium</a>
     
     <!-- HORUS-->
     <div class="suplementos-container">
@@ -277,21 +277,33 @@
 <section id="contato">
     <div class="contato">
         <h2>Entre em Contato</h2>
-    <form>
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-        <br><br>
+<form>
+  <div class="form-group">
+    <label for="NomeUsuario">Nome Completo</label>
+    <input type="text" class="form-control" id="NomeUsuario" required>
+</div>
+<div class="form-group">
+  <label for="exampleFormControlSelect1">Motivo</label>
+  <select class="form-control" id="exampleFormControlSelect1">
+    <option>Adição de suplemento</option>
+    <option>Bug</option>
+    <option>Outro</option>
+  </select>
+</div>
+  <div class="form-group">
+    <label for="Email">Email</label>
+    <input type="email" class="form-control" id="Email" placeholder="name@example.com" required>
+    </div>
+<div class="form-group">
+  <label for="mensagem">Descrição</label>
+  <textarea class="form-control" id="mensagem" rows="4" placeholder="Escreva aqui o seu texto..."></textarea>
+</div>
+<div class="form-group">
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</div>
+  </div>
 
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-        <br><br>
-
-        <label for="mensagem">Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem" rows="3" placeholder="Como podemos ajudar?" required></textarea>
-        <br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
+</form>
     </div>
     
 </section>
