@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * FUNCIONALIDADE 1: Zoom da Tabela Nutricional (Lightbox)
+ * FUNCIONALIDADE 1: Zoom da Tabela Nutricional 
  */
 function initZoomModal() {
     const modalContainer = document.getElementById("zoom-modal-container");
@@ -68,14 +68,14 @@ function initZoomModal() {
 
     zoomButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
-            // Encontra a imagem oculta dentro da área do card correspondente
+           
             const cardElement = e.target.closest(".container-hover-img");
             if (cardElement) {
                 const tabelaImg = cardElement.querySelector(".img-fundo");
                 if (tabelaImg) {
                     modalImg.src = tabelaImg.src;
                     modalContainer.classList.remove("d-none");
-                    document.body.style.overflow = "hidden"; // Trava o scroll do fundo
+                    document.body.style.overflow = "hidden";
                 }
             }
         });

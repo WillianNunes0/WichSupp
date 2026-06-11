@@ -319,7 +319,6 @@ table th {
     backdrop-filter: blur(8px);
 }
 
-<<<<<<< HEAD
 .custom-modal-content {
     position: relative;
     max-width: 90%;
@@ -329,27 +328,6 @@ table th {
     border-radius: 16px;
     border: 1px solid var(--border-color);
 }
-=======
-/* formulário */
-    .contato h2{
-        color: black;
-        display: flex;
-        justify-content: center;
-    }
-    label {
-        color: #000000;
-        font-weight: bold; 
-        }
-    .contato {
-        max-width: 400px;
-        margin: 40px auto;
-        padding: 30px;
-        background-color: #ffffff;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
->>>>>>> 4dad843f508da158d0d965486188e27547ecfe0f
 
 .custom-modal-content img {
     max-width: 100%;
@@ -374,7 +352,7 @@ table th {
     color: var(--accent);
 }
 
-/* --- CORREÇÃO DE LEGIBILIDADE (TEXTOS E BOTÕES APAGADOS) --- */
+/* --- CORREÇÃO DE LEGIBILIDADE --- */
 
 .secao-comparar .text-muted {
     color: var(--text-secondary) !important;
