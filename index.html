@@ -5,301 +5,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WichSupp?</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-
-
-<nav class="navbar navbar-expand-lg fixed-top ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">WichSupp?</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold tracking-wider" href="#">WichSupp?</a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link" href="#comparar">Comparar</a>
-        <a class="nav-link" href="#suplementos">Catálogo</a>
-        <a class="nav-link" href="#contato">Contato</a>
+        <a class="nav-link mx-2" href="#comparar">Comparar</a>
+        <a class="nav-link mx-2" href="#suplementos">Catálogo</a>
+        <a class="nav-link mx-2" href="#contato">Contato</a>
       </div>
     </div>
   </div>
 </nav>
 
-
-<section id="home">
-
-<div class="card text-center p-4 shadow">
-    <img src="./imagens/Logo-WichSupp.png" 
-         class="img-fluid mx-auto d-block" 
-         style="max-width: 150px;" 
-         alt="Logo WichSupp">
-
-    <h1 class="mt-3">WichSupp?</h1>
-    <h2 class="text-secondary">Comparador de suplementos</h2>
-</div>
-
-<br><br>
-    
-
-    <p>
-        cansado de não saber o que escolher como suplementação antes do seu treino ? <br>
-        temos a solução perfeita para você <br> 
-        <br>
-        1º Escolha dois suplementos <br>
-        2º Compare ambos <br>
-        3º Decida qual é mais eficaz para o que você procura
-       
-    </p>
-
-    <video  width="640" height="360" controls class="intro">
-        <source src="./videos/cariani.mp4" type="video/mp4">
-        <track src="./videos/legenda.vtt" kind="subtitles" srclang="pt-BR" label="português" >
-        O navegador não suporta videos
-    </video>
-
-</section>
-
-<section id="comparar" class="secao-comparar">
-    <br>
-   
-    <br>
-    <div class="container-comparacao">
-
-
-        <div class="box-select">
-        <label for="suplemento1">Suplemento 1</label>
-            <select id="suplemento1">
-                <option value="">Selecione...</option>
-                <option value="insanity">Insanity</option>
-                <option value="haze">Haze</option>
-                <option value="horus">Horus</option>
-                <option value="INASE CLOWN">Insane Clown</option>
-                <option value="INASE MAD">Insane Mad</option>
-            </select>
-        </div>
+<main class="container my-5 pt-4">
+<section id="home" class="d-flex flex-column justify-content-center align-items-center text-center hero-section min-vh-100 position-relative px-3">
+        <div class="hero-glow"></div>
         
-        <div class="box-select">
-        <label for="suplemento2">Suplemento 2</label>
-            <select id="suplemento2">
-                <option value="">Selecione...</option>
-                <option value="insanity">Insanity</option>
-                <option value="haze">Haze</option>
-                <option value="horus">Horus</option>
-                <option value="INASE CLOWN">Insane Clown</option>
-                <option value="INASE MAD">Insane Mad</option>
-            </select>
-        </div>
-
-        <button class="btn-comparar">Comparar</button>
-
-    </div>
-
-    <div class="resultado">
-        <table>
-            <thead>
-                <tr>
-                <th>Nome</th>
-                <th>Cafeina</th>
-                <th>Preço</th>
-                </tr>
-            </thead>
-            <tbody>
-
-                <tr>
-                <td>Haze</td>
-                <td>150mg</td>
-                <td>R$79,90</td>
-                </tr>
-
-                <tr>
-                <td>Insanity</td>
-                <td>150mg</td>
-                <td>R$89,90</td>
-                </tr>
-
-                <tr>
-                <td>Vencendor </td>
-                <td>150mg</td>
-                <td>R$79,90</td>
-                </tr>
+        <div class="hero-content position-relative z-3">
+            <img src="./imagens/Logo-WichSupp.png" class="img-fluid mx-auto d-block hero-logo mb-4 shadow" alt="Logo WichSupp">
+            <h1 class="display-1 fw-black tracking-wider text-uppercase text-gradient m-0">WichSupp?</h1>
+            <h2 class="fs-4 text-uppercase tracking-widest text-cyan mb-5 fw-light">O Comparador de Suplementos Definitivo</h2>
+            
+            <div class="presentation-text max-w-700 mx-auto">
+                <p class="lead text-light opacity-75 mb-4">
+                    Cansado de não saber o que escolher como suplementação antes do seu treino?<br>
+                    Compare componentes, dosagens e eficiência em tempo real.
+                </p>
                 
-            </tbody>
-        </table>
-    </div>
-
-
-
-</section>
-
-
-
-<section id="suplementos">
-
-    <h1>Catálogo</h1>
-
-    <!-- Growth -->
-
-    <a href="https://www.gsuplementos.com.br/pre-treino/" target="_blank">Growth</a>
-
-
-    <div class="suplementos-container">
-        
-        <!-- Insanity -->
-        <div class="container-hover-img" >   
-
-            <div class="texto-produto">
-                <h2>INSANITY</h2>                  
-            </div>
-
-            <img src="./imagens/Growth/Insanity.webp" class="img-topo">
-
-            <div class="tabela-area">
-                <img src="./imagens/Growth/Insanity tabela.png" class="img-fundo">
-            </div>
-            <button class="btn-zoom"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
-            
-        </div>
-        
-        <!-- Haze -->
-        <div class="container-hover-img">
-            
-            <div class="texto-produto">
-                <h2>HAZE</h2>
-            </div>
-
-            <img src="./imagens/Growth/Haze.webp" class="img-topo">
-            
-            <div class="tabela-area">
-                <img src="./imagens/Growth/Haze tabela.png" class="img-fundo">
-            </div>
-            <button class="btn-zoom"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
-
-        </div>
-        
-    </div>
-    
-    <!-- Max Titanium -->
-    
-    <a href="https://www.maxtitanium.com.br/" target="_blank">Max Titanium</a>
-    
-    <!-- HORUS-->
-    <div class="suplementos-container">
-        
-        <div class="container-hover-img">
-            
-            <div class="texto-produto">
-                <h2>HORUS</h2>
-            </div>
-
-            <img src="./imagens/Max-titanium/horus-foto.png" class="img-topo">
-            
-            <button class="btn-zoom"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
-
-            <div class="tabela-area">
-                <img src="./imagens/Max-titanium/Horus-Tabela.png" class="img-fundo">
-            </div>
-
-        </div>
-  
-    </div>
-    
-    <!-- Demos Lab -->
-    
-    <a href="https://lojademonslab.com.br/" target="_blank">Demos Lab</a>
-    
-    
-    <div class="suplementos-container">
-        
-        <!-- INASE CLOWN -->
-        <div class="container-hover-img">
-            
-            <div class="texto-produto">
-                <h2>INASE CLOWN</h2>
-            </div>
-
-            <img src="./imagens/Demos Lab/Insane-clown/Insan-clown-foto.png"class="img-topo">
-            
-            <div class="tabela-area">
-                <img src="./imagens/Demos Lab/Insane-clown/Tabela-Insane-Clown.webp" class="img-fundo">
-            </div>
-            <button class="btn-zoom"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
-
-        </div>
-        
-        <!-- Insane Mad -->
-        <div class="container-hover-img">
-            
-            <div class="texto-produto">
-                <h2>INSANE MAD</h2>
-            </div>
-
-            <img src="./imagens/Demos Lab/Insane-mad/INSANE-MAD-FOTO.png" class="img-topo">
-                <div class="tabela-area">
-                    <img src="./imagens/Demos Lab/Insane-mad/INSANE-MAD-TABELA.webp" class="img-fundo">
+                <div class="d-flex flex-wrap justify-content-center gap-3 my-5">
+                    <div class="step-badge"><span class="badge-num">1</span> Escolha dois produtos</div>
+                    <div class="step-badge"><span class="badge-num">2</span> Analise em tempo real</div>
+                    <div class="step-badge"><span class="badge-num">3</span> Decida o melhor pro bolso</div>
                 </div>
-                <button class="btn-zoom"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
 
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <a href="#comparar" class="btn btn-cyan px-4 py-3 text-uppercase fw-bold shadow-sm">Começar Comparação</a>
+                    <a href="#suplementos" class="btn btn-outline-cyan px-4 py-3 text-uppercase fw-bold">Ver Catálogo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-secondary my-5 opacity-25">
+
+    <section id="comparar" class="secao-comparar my-5">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold text-uppercase tracking-wide">Comparador</h2>
+            <p class="text-muted">Selecione os produtos para analisar os componentes</p>
         </div>
         
-    </div>
+        <div class="container-comparacao shadow-sm p-4 rounded-4 mb-4">
+            <div class="box-select">
+                <label for="suplemento1">Suplemento 1</label>
+                <select id="suplemento1">
+                    <option value="">Selecione...</option>
+                    <option value="insanity">Insanity</option>
+                    <option value="haze">Haze</option>
+                    <option value="horus">Horus</option>
+                    <option value="insane-clown">Insane Clown</option>
+                    <option value="insane-mad">Insane Mad</option>
+                </select>
+            </div>
+            
+            <div class="box-select">
+                <label for="suplemento2">Suplemento 2</label>
+                <select id="suplemento2">
+                    <option value="">Selecione...</option>
+                    <option value="insanity">Insanity</option>
+                    <option value="haze">Haze</option>
+                    <option value="horus">Horus</option>
+                    <option value="insane-clown">Insane Clown</option>
+                    <option value="insane-mad">Insane Mad</option>
+                </select>
+            </div>
+
+            <button class="btn-comparar align-self-end" id="btn-comparar-trigger">Comparar</button>
+        </div>
+
+        <div class="resultado w-100 d-none" id="tabela-resultado-wrapper">
+            <div class="table-responsive rounded-3 border border-secondary border-opacity-25 shadow">
+                <table class="table table-dark table-hover m-0 align-middle">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4">Especificação</th>
+                            <th class="py-3 px-4" id="th-suplemento1">Produto 1</th>
+                            <th class="py-3 px-4" id="th-suplemento2">Produto 2</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela-comparacao">
+                        </tbody>
+                </table>
+            </div>
+
+                <div id="veredicto-vencedor" class="mt-4 p-4 rounded-4 text-center fw-bold text-uppercase tracking-wider veredicto-custom">
+
+                </div>
+        </div>
+    </section>
+
+    <hr class="border-secondary my-5 opacity-25">
+
+    <section id="suplementos" class="my-5">
+        <h2 class="text-center display-6 fw-bold mb-5 tracking-wide text-uppercase">Catálogo</h2>
+
+        <div class="brand-section mb-5">
+            <a href="https://www.gsuplementos.com.br/pre-treino/" target="_blank" class="brand-link">Growth Supplements &rarr;</a>
+            <div class="suplementos-container">
+                <div class="container-hover-img" data-produto="insanity">   
+                    <div class="texto-produto">
+                        <h2>INSANITY</h2>                  
+                    </div>
+                    <img src="./imagens/Growth/Insanity.webp" class="img-topo" alt="Insanity">
+                    <div class="tabela-area">
+                        <img src="./imagens/Growth/Insanity tabela.png" class="img-fundo" alt="Tabela Insanity">
+                    </div>
+                    <button class="btn-zoom" title="Visualizar Tabela Nutricional"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
+                </div>
+                
+                <div class="container-hover-img" data-produto="haze">
+                    <div class="texto-produto">
+                        <h2>HAZE</h2>
+                    </div>
+                    <img src="./imagens/Growth/Haze.webp" class="img-topo" alt="Haze">
+                    <div class="tabela-area">
+                        <img src="./imagens/Growth/Haze tabela.png" class="img-fundo" alt="Tabela Haze">
+                    </div>
+                    <button class="btn-zoom" title="Visualizar Tabela Nutricional"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="brand-section mb-5">
+            <a href="https://www.maxtitanium.com.br/" target="_blank" class="brand-link">Max Titanium &rarr;</a>
+            <div class="suplementos-container">
+                <div class="container-hover-img" data-produto="horus">
+                    <div class="texto-produto">
+                        <h2>HORUS</h2>
+                    </div>
+                    <img src="./imagens/Max-titanium/horus-foto.png" class="img-topo" alt="Horus">
+                    <div class="tabela-area">
+                        <img src="./imagens/Max-titanium/Horus-Tabela.png" class="img-fundo" alt="Tabela Horus">
+                    </div>
+                    <button class="btn-zoom" title="Visualizar Tabela Nutricional"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="brand-section mb-5">
+            <a href="https://lojademonslab.com.br/" target="_blank" class="brand-link">Demons Lab &rarr;</a>
+            <div class="suplementos-container">
+                <div class="container-hover-img" data-produto="insane-clown">
+                    <div class="texto-produto">
+                        <h2>INSANE CLOWN</h2>
+                    </div>
+                    <img src="./imagens/Demos Lab/Insane-clown/Insan-clown-foto.png" class="img-topo" alt="Insane Clown">
+                    <div class="tabela-area">
+                        <img src="./imagens/Demos Lab/Insane-clown/Tabela-Insane-Clown.webp" class="img-fundo" alt="Tabela Insane Clown">
+                    </div>
+                    <button class="btn-zoom" title="Visualizar Tabela Nutricional"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
+                </div>
+                
+                <div class="container-hover-img" data-produto="insane-mad">
+                    <div class="texto-produto">
+                        <h2>INSANE MAD</h2>
+                    </div>
+                    <img src="./imagens/Demos Lab/Insane-mad/INSANE-MAD-FOTO.png" class="img-topo" alt="Insane Mad">
+                    <div class="tabela-area">
+                        <img src="./imagens/Demos Lab/INSANE-MAD-TABELA.webp" class="img-fundo" alt="Tabela Insane Mad">
+                    </div>
+                    <button class="btn-zoom" title="Visualizar Tabela Nutricional"> <img src="./imagens/zoom-icone.svg" alt="Zoom"> </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-secondary my-5 opacity-25">
     
-</section>
+    <section class="my-5 p-4 rounded-4" style="background-color: #1a1a1a; border: 1px solid #333;">
+        <h2 class="fs-4 text-warning mb-4 text-uppercase tracking-wider">Dicionário de Compostos Ativos</h2>
+        <dl class="row m-0 row-gap-3">
+            <dt class="col-sm-3 text-white border-start border-warning border-3 ps-2">Beta-alanina</dt>
+            <dd class="col-sm-9 text-secondary">Aminoácido que reduz drasticamente a fadiga muscular, atenuando a sensação de queimação (ácido lático) durante séries intensas.</dd>
+            
+            <dt class="col-sm-3 text-white border-start border-warning border-3 ps-2">Arginina</dt>
+            <dd class="col-sm-9 text-secondary">Potente precursor de óxido nítrico. Promove vasodilatação intensa, melhorando o transporte de oxigênio e o aspecto de "pump".</dd>
+            
+            <dt class="col-sm-3 text-white border-start border-warning border-3 ps-2">L-tirosina</dt>
+            <dd class="col-sm-9 text-secondary">Aminoácido aliado do foco mental. Age na síntese de neurotransmissores como dopamina, mantendo a concentração sob estresse físico.</dd>
+            
+            <dt class="col-sm-3 text-white border-start border-warning border-3 ps-2">Taurina</dt>
+            <dd class="col-sm-9 text-secondary">Atua na regulação hídrica intracelular do músculo, auxiliando na performance física e na modulação dos batimentos cardíacos.</dd>
+            
+            <dt class="col-sm-3 text-white border-start border-warning border-3 ps-2">Cafeína</dt>
+            <dd class="col-sm-9 text-secondary">O estimulante termogênico central definitivo. Aumenta o estado de alerta, reduz a percepção de esforço e eleva o gasto calórico.</dd>
+        </dl>
+    </section>
 
+    <section id="contato" class="my-5">
+        <div class="contato shadow-lg border border-secondary border-opacity-25">
+            <h2 class="text-center text-white mb-4 fw-bold tracking-wide text-uppercase fs-4">Fale Conosco</h2>
+            <form id="form-contato">
+                <div class="mb-3">
+                    <label for="nome" class="form-label text-warning text-uppercase tracking-wider fs-7 fw-semibold">Nome Completo</label>
+                    <input type="text" id="nome" class="form-control" placeholder="Seu nome" required>
+                </div>
 
-    
-    <h2>Informações complementares</h2>
-    
-    <dl>
-        
-        <dt>Beta-alanina</dt>
-        <dd>Aminoácido que ajuda a reduzir a fadiga muscular durante exercícios intensos.</dd>
-        
-        <dt>Arginina</dt>
-        <dd>Auxilia na produção de óxido nítrico, melhorando o fluxo sanguíneo.</dd>
-        
-        <dt>L-tirosina</dt>
-        <dd>Precursor de neurotransmissores importantes para foco e concentração.</dd>
-        
-        <dt>Taurina</dt>
-        <dd>Importante para o funcionamento celular e desempenho físico.</dd>
-        
-        <dt>Cafeína</dt>
-        <dd>Estimulante natural que aumenta foco, energia e performance.</dd>
-        
-    </dl>
+                <div class="mb-3">
+                    <label for="email" class="form-label text-warning text-uppercase tracking-wider fs-7 fw-semibold">E-mail Corporativo / Pessoal</label>
+                    <input type="email" id="email" class="form-control" placeholder="seu@email.com" required>
+                </div>
 
-    
+                <div class="mb-4">
+                    <label for="mensagem" class="form-label text-warning text-uppercase tracking-wider fs-7 fw-semibold">Mensagem</label>
+                    <textarea id="mensagem" class="form-control" rows="4" placeholder="Como podemos te ajudar hoje?" required></textarea>
+                </div>
 
-<section id="contato">
-    <div class="contato">
-        <h2>Entre em Contato</h2>
-    <form>
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
-        <br><br>
+                <button type="submit" class="btn btn-submit-custom text-uppercase fw-bold w-100 py-2">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+</main>
 
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-        <br><br>
-
-        <label for="mensagem">Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem" rows="3" placeholder="Como podemos ajudar?" required></textarea>
-        <br><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-    </div>
-    
-</section>
-
-<footer>
-    <p>&copy; 2024 Wichsupp.co - Todos os direitos reservados.</p>
+<footer class="py-4 border-top border-secondary border-opacity-10 text-center mt-5" style="background-color: #0d0d0d;">
+    <p class="m-0 text-secondary fs-7">&copy; 2026 Wichsupp.co — Todos os direitos reservados.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<div class="custom-modal d-none" id="zoom-modal-container">
+    <div class="custom-modal-content">
+        <button class="custom-modal-close" id="btn-close-modal">&times;</button>
+        <img src="" id="img-modal-target" alt="Tabela Nutricional Ampliada">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
